@@ -7,9 +7,9 @@ const Hero = () => {
                 <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
                 <div className="hero-content text-center text-white">
                     <div className="max-w-md">
-                        <p className='font-bold'>About</p>
+                        <p className='font-bold text-xl'>About</p>
                         <h1 className="mb-5 text-5xl font-bold">Kena-Kati</h1>
-                        <p className="mb-5">Let us introduce to you the online Camera equipments buying and selling spot. Now you can easily buy or sell your any photography product (Lens, camera, tripod, filters, flashes, lights, bags etc).
+                        <p className="mb-5 text-xl font-semibold">Let us introduce to you the online Camera equipments buying and selling spot. Now you can easily buy or sell your any photography product (Lens, camera, tripod, filters, flashes, lights, bags etc).
                             <br />
                             This is the site where you can sell your product and can meet those people who really wants to buy your product (no fake people). You can browse this site to find your desired product with a reasonable price and again we could say from the real people's</p>
 

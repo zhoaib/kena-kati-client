@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import CardDetails from "../../Pages/CardDetails/CardDetails";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import Blog from "../../Pages/Blog/Blog"
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/carddetails/:id',

@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={picture} alt="Shoes" /></figure>
             <div className="card-body text-center">
-                <h2 className="card-title">{name}</h2>
+                <h2 className="card-title mx-auto font-bold">{name}</h2>
                 <p>Original Price: ${orginalprice}</p>
                 <p>Resale Price: ${resaleprice}</p>
                 <p>Used: {yearofuse}</p>
