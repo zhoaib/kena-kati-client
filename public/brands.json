@@ -1,0 +1,17 @@
+[
+    {
+        "id": "01",
+        "picture": "https://global.canon/00cmn/img/common/ogp-logo.png",
+        "name": "Canon"
+    },
+    {
+        "id": "02",
+        "picture": "https://www.sony.net/top/2017/img/icon/top-og.jpg",
+        "name": "Sony"
+    },
+    {
+        "id": "03",
+        "picture": "https://i.pinimg.com/originals/90/21/37/90213713b1e929017d7562d803ae6622.jpg",
+        "name": "Nikon"
+    }
+]
