@@ -5,7 +5,7 @@ const Products = () => {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        fetch('brands.json')
+        fetch('http://localhost:5000/brands')
             .then(res => res.json())
             .then(data => setBrands(data))
     }, [])
@@ -17,7 +17,7 @@ const Products = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {
                     brands.map(brand => <ProductCategoryCard
-                        key={brand.id}
+                        key={brand._id}
                         brandOption={brand}
                     ></ProductCategoryCard>)
                 }
