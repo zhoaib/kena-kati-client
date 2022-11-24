@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCategoryCard = ({ brandOption }) => {
-    const { name, picture, _id, category_id } = brandOption;
+    const { name, picture, category_id } = brandOption;
 
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
