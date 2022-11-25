@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import ProductCategoryCard from './ProductCategoryCard';
 
 const Products = () => {
-    const [brands, setBrands] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/brands')
+
+    const { data: brands = [] } = useQuery({
+        queryKey: ['brands'],
+        queryFn: () => fetch('http://localhost:5000/brands')
             .then(res => res.json())
-            .then(data => setBrands(data))
-    }, [])
+    });
+
     return (
         <div>
             <h2 className='text-3xl font-bold text-center my-10'>Our Products</h2>
