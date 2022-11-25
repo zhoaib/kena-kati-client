@@ -4,13 +4,19 @@ import { AuthContext } from '../../../context/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
 
     const menuItems = <>
         <li className='bg-secondary rounded-xl mr-3'><Link to='/'>Home</Link></li>
         <li className='bg-secondary rounded-xl mr-3'><Link to='/blog'>Blog</Link></li>
         {user?.uid ?
-            <li className='bg-secondary rounded-xl mr-3'><Link to='/login'>Sign Out</Link></li>
+            <li className='bg-secondary rounded-xl mr-3'><button onClick={handleLogOut}>Sign Out</button></li>
             : <li className='bg-secondary rounded-xl mr-3'><Link to='/login'>Login</Link></li>}
 
     </>
