@@ -23,6 +23,7 @@ const CardDetails = () => {
             {camera &&
                 <BookingModal
                     camera={camera}
+                    setCamera={setCamera}
                 ></BookingModal>
             }
         </div>
