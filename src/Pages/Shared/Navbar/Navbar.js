@@ -16,7 +16,11 @@ const Navbar = () => {
         <li className='bg-secondary rounded-xl mr-3'><Link to='/'>Home</Link></li>
         <li className='bg-secondary rounded-xl mr-3'><Link to='/blog'>Blog</Link></li>
         {user?.uid ?
-            <li className='bg-secondary rounded-xl mr-3'><button onClick={handleLogOut}>Sign Out</button></li>
+            <>
+                <li className='bg-secondary rounded-xl mr-3'><Link to='/Dashboard'>Dashboard</Link></li>
+                <li className='bg-secondary rounded-xl mr-3'><button onClick={handleLogOut}>Sign Out</button></li>
+            </>
+
             : <li className='bg-secondary rounded-xl mr-3'><Link to='/login'>Login</Link></li>}
 
     </>
