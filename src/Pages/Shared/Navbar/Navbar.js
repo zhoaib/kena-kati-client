@@ -7,7 +7,7 @@ const Navbar = () => {
         <li className='bg-secondary rounded-xl mr-3'><Link to='/'>Home</Link></li>
         <li className='bg-secondary rounded-xl mr-3'><Link to='/blog'>Blog</Link></li>
         <li className='bg-secondary rounded-xl mr-3'><Link to='/login'>Login</Link></li>
-        <li className='bg-secondary rounded-xl mr-3'><Link to='/signup'>Sign Up</Link></li>
+
     </>
     return (
         <div className="navbar bg-primary font-bold rounded mb-10 flex justify-between">
