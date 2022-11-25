@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
                 <p>Location: {location}</p>
                 <p>{details}</p>
                 <div className="card-actions justify-center mt-5">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <label htmlFor="booking-modal" className="btn btn-primary">Book Now</label>
                 </div>
             </div>
         </div>
