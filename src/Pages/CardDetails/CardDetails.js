@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BookingModal from '../Shared/ProductCard/BookingModal/BookingModal';
 import ProductCard from '../Shared/ProductCard/ProductCard';
 
 const CardDetails = () => {
+    const [camera, setCamera] = useState(null);
     const allProducts = useLoaderData();
     return (
         <div>
@@ -15,10 +16,15 @@ const CardDetails = () => {
                     allProducts.map(product => <ProductCard
                         key={product._id}
                         product={product}
+                        setCamera={setCamera}
                     ></ProductCard>)
                 }
             </div>
-            <BookingModal></BookingModal>
+            {camera &&
+                <BookingModal
+                    camera={camera}
+                ></BookingModal>
+            }
         </div>
     );
 };
