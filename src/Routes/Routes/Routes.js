@@ -9,6 +9,7 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import DashBoardLayout from "../../Layout/DashBoardLayout";
+import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 
 export const router = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <MyOrders></MyOrders>
             }
         ]
     }
