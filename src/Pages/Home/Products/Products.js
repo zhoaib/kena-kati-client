@@ -1,15 +1,20 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loading from '../../Shared/Loading/Loading';
 import ProductCategoryCard from './ProductCategoryCard';
 
 const Products = () => {
 
 
-    const { data: brands = [] } = useQuery({
+    const { data: brands = [], isLoading } = useQuery({
         queryKey: ['brands'],
         queryFn: () => fetch('http://localhost:5000/brands')
             .then(res => res.json())
     });
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div>
