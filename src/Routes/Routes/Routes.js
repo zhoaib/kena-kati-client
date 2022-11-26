@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
                 element: <MyOrders></MyOrders>
             },
             {
-                path: '/dashboard/users',
+                path: '/dashboard/allusers',
                 element: <AllUsers></AllUsers>
             },
 
