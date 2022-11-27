@@ -39,6 +39,7 @@ const MyOrders = () => {
                     <tbody>
 
                         {
+                            bookings &&
                             bookings?.map((booking, i) => <tr
                                 key={i}
                                 className="hover">
