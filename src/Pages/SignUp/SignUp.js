@@ -4,8 +4,10 @@ import { useForm } from 'react-hook-form'
 import { AuthContext } from '../../context/AuthProvider';
 import toast from 'react-hot-toast';
 import useToken from '../../hooks/useToken';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('Sign Up');
 
     const { register, handleSubmit, formState: { errors } } = useForm()
     const { createUser, updateUser } = useContext(AuthContext)

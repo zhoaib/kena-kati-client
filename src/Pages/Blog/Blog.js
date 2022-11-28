@@ -1,7 +1,10 @@
 import React from "react";
+import useTitle from "../../hooks/useTitle";
 
 
 export default function Accordion() {
+
+    useTitle('Blog');
 
     return (
         <div className="bg-secondary p-10 my-10 rounded-lg">

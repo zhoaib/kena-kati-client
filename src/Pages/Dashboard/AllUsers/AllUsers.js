@@ -1,9 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import useTitle from '../../../hooks/useTitle';
 import ConfirmationModal from '../../Shared/ConfirmationModal/ConfirmationModal';
 
 const AllUsers = () => {
+
+    useTitle('Dashboard-all users')
     const [deletingUser, setDeletingUser] = useState(null);
 
     const closeModal = () => {

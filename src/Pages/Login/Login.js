@@ -1,15 +1,16 @@
-import { data } from 'autoprefixer';
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import useToken from '../../hooks/useToken';
 
 const Login = () => {
+    useTitle('Login');
 
     const { register, formState: { errors }, handleSubmit } = useForm()
-    const { signIn, googleSignIn, updateUser } = useContext(AuthContext);
+    const { signIn, googleSignIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
     const [token] = useToken(loginUserEmail);
