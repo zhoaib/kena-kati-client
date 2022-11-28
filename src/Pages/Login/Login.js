@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form'
@@ -8,7 +9,7 @@ import useToken from '../../hooks/useToken';
 const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm()
-    const { signIn, googleSignIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, updateUser } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
     const [token] = useToken(loginUserEmail);
@@ -46,6 +47,21 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+    // const saveBuyer = (userInfo) => {
+    //     const user = { userInfo };
+    //     fetch('http://localhost:5000/buyers', {
+    //         method: 'POST',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(user)
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+
+    //         })
+    // }
 
     return (
         <div className='h-[800px] flex justify-center items-center'>

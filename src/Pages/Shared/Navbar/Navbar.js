@@ -23,7 +23,7 @@ const Navbar = () => {
 
             : <>
                 <li className='bg-secondary rounded-xl m-3'><Link to='/login'>Login</Link></li>
-                <li className='bg-secondary rounded-xl m-3 ' >
+                {/* <li className='bg-secondary rounded-xl m-3 ' >
 
                     <Link>Login As
                         <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <li className='bg-secondary rounded-xl btn btn-sm mb-1 '><Link to='/login'>Login As Seller</Link></li>
                         <li className='bg-secondary rounded-xl btn btn-sm '><Link>Login As Buyer</Link></li>
                     </ul>
-                </li>
+                </li> */}
             </>}
 
 
