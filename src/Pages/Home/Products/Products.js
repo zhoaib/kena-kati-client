@@ -8,7 +8,7 @@ const Products = () => {
 
     const { data: brands = [], isLoading } = useQuery({
         queryKey: ['brands'],
-        queryFn: () => fetch('http://localhost:5000/brands')
+        queryFn: () => fetch('https://kena-kati-server.vercel.app/brands')
             .then(res => res.json())
     });
 

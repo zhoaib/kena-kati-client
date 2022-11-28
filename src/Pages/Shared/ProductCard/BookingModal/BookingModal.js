@@ -23,7 +23,7 @@ const BookingModal = ({ camera, setCamera }) => {
             location,
             resaleprice,
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://kena-kati-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

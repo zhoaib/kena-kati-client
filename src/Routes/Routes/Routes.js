@@ -6,7 +6,6 @@ import Login from "../../Pages/Login/Login";
 import Blog from "../../Pages/Blog/Blog"
 import NotFound from "../../Pages/NotFound/NotFound";
 import SignUp from "../../Pages/SignUp/SignUp";
-import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import DashBoardLayout from "../../Layout/DashBoardLayout";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
@@ -37,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: '/carddetails/:id',
                 element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://kena-kati-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '*',

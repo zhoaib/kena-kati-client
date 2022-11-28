@@ -50,7 +50,7 @@ const Login = () => {
     }
     // const saveBuyer = (userInfo) => {
     //     const user = { userInfo };
-    //     fetch('http://localhost:5000/buyers', {
+    //     fetch('https://kena-kati-server.vercel.app/buyers', {
     //         method: 'POST',
     //         headers: {
     //             'content-type': 'application/json'
